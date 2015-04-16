@@ -12,5 +12,7 @@ ADD         znc.conf.default /src/
 RUN         chmod 644 /src/znc.conf.default
 
 EXPOSE      6667
+EXPOSE      6697
+
 #ENTRYPOINT  ["/usr/local/bin/start-znc"]
 #CMD         [""]
