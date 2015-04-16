@@ -95,3 +95,4 @@ with the following notable changes:
 
 * use latest ZNC 1.6.0
 * enable SSL by default
+* include modpython (use `/znc LoadMod modpython`)
