@@ -11,7 +11,7 @@ apt-get update
 apt-get install -y sudo
 
 # Install build dependencies.
-apt-get install -y wget build-essential libssl-dev libperl-dev pkg-config software-properties-common python-software-properties
+apt-get install -y wget build-essential libssl-dev libperl-dev pkg-config software-properties-common python-software-properties python3-dev
 
 # Install newer compiler to be able to build znc 1.6.0
 add-apt-repository -y ppa:ubuntu-toolchain-r/test
@@ -30,7 +30,7 @@ cd /src
 wget "http://znc.in/releases/archive/znc-${ZNC_VERSION}.tar.gz"
 tar -zxf "znc-${ZNC_VERSION}.tar.gz"
 cd "znc-${ZNC_VERSION}"
-./configure && make && make install
+./configure --enable-python && make && make install
 
 # Clean up
 apt-get remove -y wget
