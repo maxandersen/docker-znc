@@ -28,8 +28,8 @@ if [ ! -f "${DATADIR}/configs/znc.conf" ]; then
 fi
 
 # autocreate pem file if not found. Otherwise SSL wont work out of box.
-if [ ! -f "${ZNCDATA}/znc.pem" ]; then
-  znc --makepem -d "$ZNCDATA"
+if [ ! -f "${DATADIR}/znc.pem" ]; then
+  znc --makepem -d "$DATADIR"
 fi
 
 # Make sure $DATADIR is owned by znc user. This effects ownership of the

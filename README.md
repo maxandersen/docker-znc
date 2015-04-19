@@ -1,6 +1,7 @@
 # ZNC for Docker
 
-Run the [ZNC](http://znc.in) IRC Bouncer in a Docker container.
+Run the [ZNC](http://znc.in) IRC Bouncer in a Docker container -
+available at [docker hub](https://registry.hub.docker.com/u/maxandersen/znc/).
 
 ## Prerequisites
 
