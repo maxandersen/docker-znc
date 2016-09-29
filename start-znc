@@ -34,7 +34,9 @@ fi
 
 # Make sure $DATADIR is owned by znc user. This effects ownership of the
 # mounted directory on the host machine too.
-chown -R znc:znc "$DATADIR"
+# chown -R znc:znc $DATADIR
+# using this to avoid it taking too long. 
+find $DATADIR -maxdepth 6 -exec chown -v znc:znc {} \;
 
 # Start ZNC.
 exec sudo -u znc znc --foreground --datadir="$DATADIR" $@
