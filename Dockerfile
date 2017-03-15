@@ -3,7 +3,9 @@ MAINTAINER  Max Rydahl Andersen "docker@xam.dk"
 
 ## bootstrap builds znc and cleans up to
 ## avoid extra layers
+ADD         getdeps.sh /tmp/
 ADD         bootstrap.sh /tmp/
+RUN         chmod +x /tmp/getdeps.sh && sleep 1 && /tmp/getdeps.sh
 RUN         chmod +x /tmp/bootstrap.sh && sleep 1 && /tmp/bootstrap.sh
 
 RUN         useradd znc

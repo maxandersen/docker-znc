@@ -3,6 +3,9 @@
 Run the [ZNC](http://znc.in) IRC Bouncer in a Docker container -
 available at [docker hub](https://registry.hub.docker.com/u/maxandersen/znc/).
 
+Now have [znc push](https://github.com/jreese/znc-push) built-in as a
+module.
+
 ## Prerequisites
 
 1. Install [Docker](http://docker.io/).
